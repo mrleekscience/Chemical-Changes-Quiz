@@ -1,0 +1,2959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Leek Science — AQA GCSE Chemistry Topic 4: Chemical Changes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — CRIMSON / RUBY RED DESIGN TOKENS (TOPIC 4)
+       ========================================================================== */
+    :root {
+      --crimson-950: #1f070a;
+      --crimson-900: #450a0a;
+      --crimson-800: #7f1d1d;
+      --ruby-700: #991b1b;
+      --ruby-600: #b91c1c;
+      --ruby-500: #dc2626;
+      --ruby-400: #ef4444;
+
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+      --rose-tint: #fffafa;
+
+      --bg-page: #f3f6f8;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --blue-100: #e0f2fe;
+      --blue-700: #0369a1;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --shadow-shell: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      --shadow-cta: 0 6px 18px -2px rgba(185, 28, 28, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP CRIMSON BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #1f070a 0%, #450a0a 55%, #7f1d1d 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rose-200);
+    }
+
+    .brand-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 1.98rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: var(--slate-200);
+      max-width: 780px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--ruby-500);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--ruby-500);
+      box-shadow: 0 0 0 3.5px rgba(220, 38, 38, 0.14);
+    }
+
+    .text-input.input-error {
+      border-color: var(--ruby-500);
+      background-color: var(--rose-50);
+      animation: shakeInput 0.32s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ruby-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      color: var(--ruby-600);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--blue-100);
+      color: var(--blue-700);
+    }
+
+    .chip-rose {
+      background: var(--rose-100);
+      color: var(--ruby-600);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--ruby-500);
+      border-color: var(--ruby-500);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-ruby {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--ruby-500);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--ruby-500);
+      border-color: var(--ruby-500);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.28);
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--ruby-700);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-dark {
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-rose {
+      background: var(--rose-50);
+      color: var(--ruby-600);
+      border: 1px solid var(--rose-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--ruby-500);
+      color: var(--ruby-600);
+      background: var(--rose-tint);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--ruby-700), var(--ruby-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--rose-tint);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ruby-600);
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.5;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--rose-200);
+      border-left: 4px solid var(--ruby-500);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", monospace;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--crimson-900);
+      line-height: 1.45;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--ruby-500);
+      background: var(--rose-50);
+      color: var(--crimson-900);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--ruby-500);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--ruby-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--slate-600);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.55;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--ruby-700);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC REPORT
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--rose-tint);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ruby-600);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--ruby-600);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--ruby-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--ruby-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--ruby-500); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--ruby-500); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ruby-600);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         CRIMSON HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 4 &bull; PAPER 1 REVISION (8462 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fecaca" stroke-width="2.2">
+            <path d="M9 3h6"></path>
+            <path d="M10 3v5.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 8.5V3"></path>
+            <path d="M7 15h10"></path>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Chemical Changes Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 4 content or Required Practicals only, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Reactivity series, metal extraction by carbon reduction, reactions of acids with metals, oxides, hydroxides &amp; carbonates, pH scale, Required Practical 1 (Soluble Salts) &amp; electrolysis (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-rose">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Everything in Foundation plus oxidation &amp; reduction in terms of electrons (OILRIG), ionic equations &amp; half-equations for displacement &amp; electrolysis, and strong vs weak acids (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Chemistry -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8462</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Chemistry</div>
+            <p class="tier-card-desc">Everything in Higher plus Required Practical 2: Neutralisation Titrations — burette, volumetric pipette, methyl orange/phenolphthalein indicators, concordant titres &amp; titration calculations (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-ruby" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Chemical Changes Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers reactivity series, extraction of metals, acids, alkalis &amp; pH, neutralisation, redox, electrolysis &amp; required practicals.</p>
+            </div>
+          </div>
+
+          <!-- Required Practicals Only -->
+          <div class="focus-card" id="focus-card-practicals" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practicals')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practicals')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v5.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 8.5V3"></path>
+                <path d="M7 15h10"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practicals Only</span>
+                <span id="focus-check-practicals" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused practical drill: RP1 Making Pure, Dry Soluble Salts, RP2 Neutralisation Titrations [Separate], and RP3 Electrolysis of Aqueous Solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">60 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-rose">Higher Tier</span>
+          <span id="hud-topic-pill" class="hud-pill-rose">Sub-topic</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Change Settings</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Reconfigure Quiz</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: END-OF-QUIZ DIAGNOSTIC REPORT
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Reconfigure Quiz</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong (80%+)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show All Answers &amp; Insights</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Chemistry (8462 &amp; 8464) Topic 4 Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE CHEMISTRY TOPIC 4 QUESTION BANK (72 DISTINCT QUESTIONS)
+       tiers: ["foundation", "higher", "separate"]
+       isPractical: true for RP1 (Salts), RP2 (Titrations), and RP3 (Electrolysis)
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Reactivity of Metals & Extraction": "Memorise the reactivity series order (including carbon and hydrogen), use OILRIG (Oxidation Is Loss, Reduction Is Gain of electrons), and know when to extract metals by carbon reduction vs. electrolysis.",
+      "Reactions of Acids, Bases & Salts (RP1)": "Learn the general salt equations (acid + metal/oxide/hydroxide/carbonate) and the 5-step Required Practical 1 method: warm acid, add insoluble base in excess, filter, heat gently to crystallisation point, cool and pat dry.",
+      "pH Scale, Neutralisation & Titrations (RP2)": "Distinguish strong vs. weak acids (complete vs. partial ionisation) from concentrated vs. dilute, remember each pH decrease of 1 means 10&times; higher H<sup>+</sup> concentration, and revise RP2 titration technique.",
+      "Electrolysis & Aqueous Solutions (RP3)": "Apply the cathode rule (least reactive positive ion discharged: metal if below H, else H<sub>2</sub>) and anode rule (halide &rarr; halogen, otherwise 4OH<sup>&minus;</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup>)."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. REACTIVITY OF METALS & EXTRACTION (18 Questions)
+      // ========================================================================
+      {
+        id: "T4_Q01",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "When a metal reacts with oxygen, water, or dilute acid, what happens to its atoms?",
+        formula: "M &rarr; M<sup>n+</sup> + ne<sup>&minus;</sup>",
+        options: [
+          "The metal atoms lose electrons to form positive ions",
+          "The metal atoms gain electrons to form negative ions",
+          "The metal atoms share pairs of protons",
+          "The metal atoms gain neutrons to become heavier"
+        ],
+        answer: 0,
+        insight: "The reactivity of a metal is directly related to its tendency to lose outer-shell electrons and form positive ions (cations)."
+      },
+      {
+        id: "T4_Q02",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Which list arranges the metals in the correct order of DECREASING reactivity (most reactive first)?",
+        formula: null,
+        options: [
+          "Potassium &gt; Sodium &gt; Calcium &gt; Magnesium &gt; Zinc &gt; Iron &gt; Copper",
+          "Calcium &gt; Potassium &gt; Magnesium &gt; Sodium &gt; Iron &gt; Zinc &gt; Copper",
+          "Potassium &gt; Magnesium &gt; Sodium &gt; Zinc &gt; Calcium &gt; Copper &gt; Iron",
+          "Copper &gt; Iron &gt; Zinc &gt; Magnesium &gt; Calcium &gt; Sodium &gt; Potassium"
+        ],
+        answer: 0,
+        insight: "AQA standard reactivity series (most to least reactive): Potassium, Sodium, Lithium, Calcium, Magnesium, (Carbon), Zinc, Iron, (Hydrogen), Copper."
+      },
+      {
+        id: "T4_Q03",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Why are unreactive metals such as gold and platinum found in the Earth's crust as the native uncombined metal itself?",
+        formula: null,
+        options: [
+          "They are so unreactive that they do not readily combine with oxygen or other elements",
+          "They are less dense than rock and float to the surface",
+          "They are extracted from ores using bacteria",
+          "They dissolve in rainwater and crystallise in caves"
+        ],
+        answer: 0,
+        insight: "Gold is at the bottom of the reactivity series and does not react with oxygen or water, so it occurs naturally as the pure element."
+      },
+      {
+        id: "T4_Q04",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "How are metals LESS reactive than carbon (such as iron, zinc, and copper) extracted from their metal oxides?",
+        formula: "2Fe<sub>2</sub>O<sub>3</sub> + 3C &rarr; 4Fe + 3CO<sub>2</sub>",
+        options: [
+          "By reduction with carbon (heating the metal oxide with carbon)",
+          "By electrolysis of the aqueous metal sulfate",
+          "By dissolving the ore in cold distilled water",
+          "By fractional distillation of the solid ore"
+        ],
+        answer: 0,
+        insight: "Because carbon is more reactive than iron, zinc, and copper, carbon can displace oxygen from their oxides—reducing the metal oxide to pure metal."
+      },
+      {
+        id: "T4_Q05",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Why must aluminium be extracted from aluminium oxide by electrolysis rather than by heating with carbon?",
+        formula: "Al<sub>2</sub>O<sub>3</sub>",
+        options: [
+          "Aluminium is MORE reactive than carbon, so carbon cannot displace aluminium from aluminium oxide",
+          "Aluminium oxide is a covalent gas at room temperature",
+          "Carbon reacts explosively with aluminium",
+          "Electrolysis uses zero electrical energy"
+        ],
+        answer: 0,
+        insight: "Metals above carbon in the reactivity series (potassium, sodium, lithium, calcium, magnesium, aluminium) cannot be reduced by carbon and require electrolysis."
+      },
+      {
+        id: "T4_Q06",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "A piece of magnesium ribbon is placed into a blue solution of copper(II) sulfate. What happens and why?",
+        formula: "Mg(s) + CuSO<sub>4</sub>(aq) &rarr; MgSO<sub>4</sub>(aq) + Cu(s)",
+        options: [
+          "Magnesium displaces copper because magnesium is more reactive; the blue solution fades and a brown/pink solid coats the magnesium",
+          "No reaction occurs because copper is more reactive than magnesium",
+          "The solution turns dark blue and hydrogen gas fizzes off",
+          "A white precipitate of magnesium oxide sinks to the bottom"
+        ],
+        answer: 0,
+        insight: "A more reactive metal displaces a less reactive metal from an aqueous solution of its salt. Blue Cu<sup>2+</sup> ions are replaced by colourless Mg<sup>2+</sup> ions and solid copper forms."
+      },
+      {
+        id: "T4_Q07",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "A student tests four metals (W, X, Y, Z) with cold water and dilute hydrochloric acid. W fizzes violently with cold water; X does not react with cold water but fizzes rapidly with acid; Y reacts very slowly with acid; Z shows no reaction with either. Order them from MOST to LEAST reactive.",
+        formula: null,
+        options: [
+          "W &gt; X &gt; Y &gt; Z",
+          "Z &gt; Y &gt; X &gt; W",
+          "X &gt; W &gt; Y &gt; Z",
+          "W &gt; Y &gt; X &gt; Z"
+        ],
+        answer: 0,
+        insight: "Only the most reactive metals (e.g., K, Na, Ca) react vigorously with cold water (W). Moderately reactive metals (e.g., Mg, Zn) react with acid only (X &gt; Y), and unreactive metals (e.g., Cu) do not react with dilute acid (Z)."
+      },
+      {
+        id: "T4_Q08",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "In terms of oxygen, what happens when iron(III) oxide is heated with carbon monoxide in a blast furnace?",
+        formula: "Fe<sub>2</sub>O<sub>3</sub> + 3CO &rarr; 2Fe + 3CO<sub>2</sub>",
+        options: [
+          "Iron(III) oxide is reduced (loses oxygen) and carbon monoxide is oxidised (gains oxygen)",
+          "Both iron(III) oxide and carbon monoxide are oxidised",
+          "Iron(III) oxide is oxidised and carbon monoxide is reduced",
+          "Neither substance undergoes oxidation or reduction"
+        ],
+        answer: 0,
+        insight: "In terms of oxygen: oxidation is the gain of oxygen (CO &rarr; CO<sub>2</sub>) and reduction is the loss of oxygen (Fe<sub>2</sub>O<sub>3</sub> &rarr; Fe)."
+      },
+      {
+        id: "T4_Q09",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Using the OILRIG definition of redox, what happens to zinc atoms and copper ions in the displacement reaction below?",
+        formula: "Zn(s) + Cu<sup>2+</sup>(aq) &rarr; Zn<sup>2+</sup>(aq) + Cu(s)",
+        options: [
+          "Zinc atoms are oxidised (lose 2 electrons) and Cu<sup>2+</sup> ions are reduced (gain 2 electrons)",
+          "Zinc atoms are reduced (gain 2 electrons) and Cu<sup>2+</sup> ions are oxidised (lose 2 electrons)",
+          "Both Zn and Cu<sup>2+</sup> are oxidised",
+          "Spectator sulfate ions are reduced to sulfur"
+        ],
+        answer: 0,
+        insight: "OILRIG: Oxidation Is Loss of electrons (Zn &rarr; Zn<sup>2+</sup> + 2e<sup>−</sup>); Reduction Is Gain of electrons (Cu<sup>2+</sup> + 2e<sup>−</sup> &rarr; Cu)."
+      },
+      {
+        id: "T4_Q10",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Which two half-equations accurately represent the electron transfers occurring when magnesium reacts with dilute hydrochloric acid?",
+        formula: "Mg(s) + 2H<sup>+</sup>(aq) &rarr; Mg<sup>2+</sup>(aq) + H<sub>2</sub>(g)",
+        options: [
+          "Mg &rarr; Mg<sup>2+</sup> + 2e<sup>&minus;</sup> &nbsp;and&nbsp; 2H<sup>+</sup> + 2e<sup>&minus;</sup> &rarr; H<sub>2</sub>",
+          "Mg + 2e<sup>&minus;</sup> &rarr; Mg<sup>2+</sup> &nbsp;and&nbsp; 2H<sup>+</sup> &rarr; H<sub>2</sub> + 2e<sup>&minus;</sup>",
+          "Mg &rarr; Mg<sup>+</sup> + e<sup>&minus;</sup> &nbsp;and&nbsp; H<sup>+</sup> + e<sup>&minus;</sup> &rarr; H<sub>2</sub>",
+          "2Cl<sup>&minus;</sup> &rarr; Cl<sub>2</sub> + 2e<sup>&minus;</sup> &nbsp;and&nbsp; Mg<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Mg"
+        ],
+        answer: 0,
+        insight: "Magnesium atoms are oxidised by losing 2 electrons (Mg &rarr; Mg<sup>2+</sup> + 2e<sup>−</sup>), while two hydrogen ions from the acid are reduced by gaining 2 electrons (2H<sup>+</sup> + 2e<sup>−</sup> &rarr; H<sub>2</sub>)."
+      },
+      {
+        id: "T4_Q11",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Which ionic equation (with spectator ions removed) represents the displacement reaction between iron and silver nitrate solution?",
+        formula: "Fe(s) + 2AgNO<sub>3</sub>(aq) &rarr; Fe(NO<sub>3</sub>)<sub>2</sub>(aq) + 2Ag(s)",
+        options: [
+          "Fe(s) + 2Ag<sup>+</sup>(aq) &rarr; Fe<sup>2+</sup>(aq) + 2Ag(s)",
+          "Fe(s) + Ag<sup>+</sup>(aq) &rarr; Fe<sup>2+</sup>(aq) + Ag(s)",
+          "Fe<sup>2+</sup>(aq) + 2NO<sub>3</sub><sup>&minus;</sup>(aq) &rarr; Fe(NO<sub>3</sub>)<sub>2</sub>(aq)",
+          "2Ag<sup>+</sup>(aq) + 2e<sup>&minus;</sup> &rarr; 2Ag(s)"
+        ],
+        answer: 0,
+        insight: "Nitrate ions (NO<sub>3</sub><sup>−</sup>) remain aqueous on both sides as spectator ions. Removing them gives Fe(s) + 2Ag<sup>+</sup>(aq) &rarr; Fe<sup>2+</sup>(aq) + 2Ag(s), balancing both atoms and +2 charge."
+      },
+      {
+        id: "T4_Q12",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "In the reaction between calcium and water, which species is oxidised and which species is reduced?",
+        formula: "Ca(s) + 2H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(aq) + H<sub>2</sub>(g)",
+        options: [
+          "Calcium atoms are oxidised (lose 2e<sup>&minus;</sup>); hydrogen ions in water are reduced (gain e<sup>&minus;</sup>)",
+          "Calcium atoms are reduced; hydroxide ions are oxidised",
+          "Water is oxidised to oxygen gas; calcium is reduced",
+          "Neither oxidation nor reduction occurs"
+        ],
+        answer: 0,
+        insight: "Ca changes from neutral atoms to Ca<sup>2+</sup> ions (loses 2 electrons = oxidation), while H<sup>+</sup> in water gains electrons to form neutral H<sub>2</sub> molecules (reduction)."
+      },
+      {
+        id: "T4_Q13",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Why does copper NOT react with dilute hydrochloric acid or dilute sulfuric acid?",
+        formula: "Cu(s) + HCl(aq) &rarr; No reaction",
+        options: [
+          "Copper is below hydrogen in the reactivity series, so it cannot displace hydrogen ions from acids",
+          "Copper forms an insoluble layer of sodium chloride",
+          "Copper is a liquid at room temperature",
+          "Hydrochloric acid does not contain hydrogen ions"
+        ],
+        answer: 0,
+        insight: "Only metals above hydrogen in the reactivity series can displace hydrogen from dilute acids."
+      },
+      {
+        id: "T4_Q14",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Why is sodium more reactive than lithium when reacting with water?",
+        formula: "Li (2,1) vs. Na (2,8,1)",
+        options: [
+          "A sodium atom is larger with more electron shells, so its outer electron is further from the nucleus with more shielding and is lost more easily",
+          "Sodium has fewer protons in its nucleus than lithium",
+          "Sodium gains electrons more easily than lithium",
+          "Lithium has a full outer shell of electrons"
+        ],
+        answer: 0,
+        insight: "Metal reactivity depends on how easily an atom loses its outer electron(s). Greater atomic radius and shielding weaken nuclear attraction, making electron loss easier."
+      },
+      {
+        id: "T4_Q15",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "What is a metal 'ore'?",
+        formula: null,
+        options: [
+          "A rock that contains enough of a metal or metal compound to make it economical to extract the metal",
+          "Any pure sample of a Group 1 alkali metal",
+          "A mixture of two or more metals melted together",
+          "The waste slag produced in a blast furnace"
+        ],
+        answer: 0,
+        insight: "An ore is a naturally occurring rock containing a metal compound (often an oxide or sulfide) in sufficient concentration to be worth extracting commercially."
+      },
+      {
+        id: "T4_Q16",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Identify the reduction half-equation in the reaction between aluminium and iron(III) oxide (the thermite reaction).",
+        formula: "2Al(s) + Fe<sub>2</sub>O<sub>3</sub>(s) &rarr; Al<sub>2</sub>O<sub>3</sub>(s) + 2Fe(l)",
+        options: [
+          "Fe<sup>3+</sup> + 3e<sup>&minus;</sup> &rarr; Fe",
+          "Al &rarr; Al<sup>3+</sup> + 3e<sup>&minus;</sup>",
+          "2O<sup>2&minus;</sup> &rarr; O<sub>2</sub> + 4e<sup>&minus;</sup>",
+          "Fe &rarr; Fe<sup>3+</sup> + 3e<sup>&minus;</sup>"
+        ],
+        answer: 0,
+        insight: "Reduction is gain of electrons: each Fe<sup>3+</sup> ion in Fe<sub>2</sub>O<sub>3</sub> gains 3 electrons to form a neutral iron atom (Fe<sup>3+</sup> + 3e<sup>−</sup> &rarr; Fe)."
+      },
+      {
+        id: "T4_Q17",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Which gas is produced when a reactive metal such as zinc reacts with dilute sulfuric acid?",
+        formula: "Zn(s) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; ZnSO<sub>4</sub>(aq) + ?",
+        options: ["Hydrogen (H<sub>2</sub>)", "Oxygen (O<sub>2</sub>)", "Carbon dioxide (CO<sub>2</sub>)", "Sulfur dioxide (SO<sub>2</sub>)"],
+        answer: 0,
+        insight: "Metal + Acid &rarr; Salt + Hydrogen gas (MASH)."
+      },
+      {
+        id: "T4_Q18",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactivity of Metals & Extraction",
+        stem: "Why is a redox reaction so named?",
+        formula: null,
+        options: [
+          "Because reduction and oxidation always take place at the same time—electrons lost by one species are gained by another",
+          "Because all reactants must be red solids",
+          "Because the reaction reverses every 10 seconds",
+          "Because only oxygen and hydrogen can react"
+        ],
+        answer: 0,
+        insight: "Electrons cannot simply vanish in a chemical reaction; whenever one species is oxidised (loses electrons), another species must simultaneously be reduced (gain those electrons)."
+      },
+
+      // ========================================================================
+      // 2. REACTIONS OF ACIDS, BASES & SALTS — INCLUDING RP1 (18 Questions)
+      // ========================================================================
+      {
+        id: "T4_Q19",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "Which three salts are produced by hydrochloric acid (HCl), nitric acid (HNO<sub>3</sub>), and sulfuric acid (H<sub>2</sub>SO<sub>4</sub>) respectively?",
+        formula: "HCl &nbsp;|&nbsp; HNO<sub>3</sub> &nbsp;|&nbsp; H<sub>2</sub>SO<sub>4</sub>",
+        options: [
+          "Chlorides, nitrates, and sulfates",
+          "Chlorates, nitrides, and sulfides",
+          "Hydroxides, nitrates, and sulfites",
+          "Chlorides, nitrites, and carbonates"
+        ],
+        answer: 0,
+        insight: "Hydrochloric acid forms chlorides (Cl<sup>−</sup>), nitric acid forms nitrates (NO<sub>3</sub><sup>−</sup>), and sulfuric acid forms sulfates (SO<sub>4</sub><sup>2−</sup>)."
+      },
+      {
+        id: "T4_Q20",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "What are the three products formed when a metal carbonate reacts with a dilute acid?",
+        formula: "CaCO<sub>3</sub>(s) + 2HCl(aq) &rarr; ?",
+        options: [
+          "A salt, water, and carbon dioxide",
+          "A salt and hydrogen gas only",
+          "A salt and water only",
+          "A metal oxide and oxygen gas"
+        ],
+        answer: 0,
+        insight: "Acid + Metal Carbonate &rarr; Salt + Water + Carbon Dioxide (e.g., CaCl<sub>2</sub> + H<sub>2</sub>O + CO<sub>2</sub>)."
+      },
+      {
+        id: "T4_Q21",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "What are the products formed when an insoluble metal oxide (such as copper(II) oxide) reacts with dilute sulfuric acid?",
+        formula: "CuO(s) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; ?",
+        options: [
+          "Copper(II) sulfate and water",
+          "Copper(II) sulfate and hydrogen",
+          "Copper(II) sulfate, water, and carbon dioxide",
+          "Copper metal and sulfur dioxide"
+        ],
+        answer: 0,
+        insight: "Metal oxides and metal hydroxides are bases: Acid + Base &rarr; Salt + Water (no gas is produced)."
+      },
+      {
+        id: "T4_Q22",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "How do you test for the gas produced when magnesium reacts with dilute hydrochloric acid?",
+        formula: "Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)",
+        options: [
+          "Hold a lit splint at the mouth of the tube — hydrogen burns with a squeaky pop",
+          "Bubble the gas through limewater — it turns milky/cloudy",
+          "Insert a glowing splint — it relights",
+          "Hold damp blue litmus paper in the gas — it bleaches white"
+        ],
+        answer: 0,
+        insight: "Hydrogen gas burns rapidly in air with a characteristic squeaky pop when ignited with a burning splint."
+      },
+      {
+        id: "T4_Q23",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "How do you confirm that the gas evolved when zinc carbonate reacts with nitric acid is carbon dioxide?",
+        formula: "ZnCO<sub>3</sub>(s) + 2HNO<sub>3</sub>(aq) &rarr; Zn(NO<sub>3</sub>)<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+        options: [
+          "Bubble the gas through limewater (aqueous calcium hydroxide) — it turns cloudy/milky",
+          "Hold a lit splint in the gas — it gives a squeaky pop",
+          "Insert a glowing splint — it relights",
+          "Bubble the gas through universal indicator — it turns purple"
+        ],
+        answer: 0,
+        insight: "Carbon dioxide reacts with limewater (Ca(OH)<sub>2</sub>(aq)) to form an insoluble white precipitate of calcium carbonate (CaCO<sub>3</sub>), turning the solution cloudy."
+      },
+      {
+        id: "T4_Q24",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "In Required Practical 1 (preparing pure, dry copper(II) sulfate crystals), why is the dilute sulfuric acid warmed gently before adding copper(II) oxide?",
+        formula: "CuO(s) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; CuSO<sub>4</sub>(aq) + H<sub>2</sub>O(l)",
+        options: [
+          "To increase the rate of reaction so the insoluble copper(II) oxide reacts completely in a reasonable time",
+          "To boil away all the sulfuric acid before adding the base",
+          "To decompose the copper(II) oxide into copper metal",
+          "To lower the pH of the acid to 14"
+        ],
+        answer: 0,
+        insight: "Warming the acid increases particle kinetic energy and collision frequency, speeding up the neutralisation reaction between solid CuO and aqueous H<sub>2</sub>SO<sub>4</sub>."
+      },
+      {
+        id: "T4_Q25",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "In Required Practical 1, why is copper(II) oxide powder added IN EXCESS (until black powder remains unreacted at the bottom) to the warm sulfuric acid?",
+        formula: null,
+        options: [
+          "To ensure ALL the sulfuric acid has completely reacted so the resulting salt solution is pure and not contaminated with unreacted acid",
+          "To turn the solution acidic so crystals grow faster",
+          "To absorb water from the beaker",
+          "Because copper(II) oxide dissolves easily in water"
+        ],
+        answer: 0,
+        insight: "AQA Required Practical 1 must-know: adding the insoluble base in excess guarantees complete neutralisation of all the acid, leaving only neutral salt solution + excess insoluble solid."
+      },
+      {
+        id: "T4_Q26",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "In Required Practical 1, once excess black copper(II) oxide remains in the blue copper(II) sulfate solution, what is the NEXT step?",
+        formula: null,
+        options: [
+          "Filter the mixture using filter paper and a funnel to remove the unreacted excess solid copper(II) oxide",
+          "Boil the mixture to complete dryness immediately",
+          "Add more sulfuric acid until the black solid dissolves",
+          "Measure the volume with a burette"
+        ],
+        answer: 0,
+        insight: "Filtration separates the unreacted insoluble CuO (residue) from the pure aqueous copper(II) sulfate solution (filtrate)."
+      },
+      {
+        id: "T4_Q27",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "After filtering off excess copper(II) oxide in Required Practical 1, how are pure, dry hydrated copper(II) sulfate crystals obtained from the filtrate?",
+        formula: "CuSO<sub>4</sub>(aq) &rarr; CuSO<sub>4</sub>&middot;5H<sub>2</sub>O(s)",
+        options: [
+          "Heat gently in an evaporating basin over a water bath until crystals start to form (crystallisation point), leave to cool, filter, and pat dry with filter paper",
+          "Heat strongly with a roaring Bunsen flame until all water has boiled away completely",
+          "Place the liquid in a Liebig condenser and discard the crystals",
+          "Add universal indicator and leave in direct sunlight"
+        ],
+        answer: 0,
+        insight: "Gentle evaporation followed by cooling allows large blue hydrated crystals to form; heating strongly to dryness drives off water of crystallisation and leaves white anhydrous powder."
+      },
+      {
+        id: "T4_Q28",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "Which pair of reactants could NOT be used safely or effectively in Required Practical 1 to prepare a pure soluble salt by adding an excess insoluble solid to an acid?",
+        formula: null,
+        options: [
+          "Sodium metal and dilute hydrochloric acid (sodium reacts violently/explosively with water and acid, and excess sodium cannot be filtered off)",
+          "Zinc oxide and dilute nitric acid",
+          "Magnesium carbonate and dilute sulfuric acid",
+          "Copper(II) carbonate and dilute hydrochloric acid"
+        ],
+        answer: 0,
+        insight: "Group 1 metals like sodium and potassium are far too reactive to add directly to acids, and their hydroxides/carbonates are soluble so excess cannot be separated by filtration (a titration is needed instead)."
+      },
+      {
+        id: "T4_Q29",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "What is the chemical formula of the salt magnesium nitrate, formed when magnesium oxide reacts with nitric acid?",
+        formula: "MgO(s) + 2HNO<sub>3</sub>(aq) &rarr; ? + H<sub>2</sub>O(l)",
+        options: ["MgNO<sub>3</sub>", "Mg(NO<sub>3</sub>)<sub>2</sub>", "Mg<sub>2</sub>NO<sub>3</sub>", "Mg(NO<sub>2</sub>)<sub>2</sub>"],
+        answer: 1,
+        insight: "Magnesium forms Mg<sup>2+</sup> ions and nitrate is NO<sub>3</sub><sup>−</sup>, so two nitrate ions are needed per magnesium ion: Mg(NO<sub>3</sub>)<sub>2</sub>."
+      },
+      {
+        id: "T4_Q30",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "What is the difference between a 'base' and an 'alkali'?",
+        formula: null,
+        options: [
+          "A base is any substance that neutralises an acid (such as metal oxides and hydroxides); an alkali is a soluble base that dissolves in water to produce OH<sup>&minus;</sup> ions",
+          "A base has a pH below 7; an alkali has a pH above 7",
+          "All metal oxides are alkalis, whereas bases never contain oxygen",
+          "Bases only react with weak acids, whereas alkalis react with strong acids"
+        ],
+        answer: 0,
+        insight: "All alkalis are bases, but not all bases are alkalis—for example, copper(II) oxide (CuO) is an insoluble base, whereas sodium hydroxide (NaOH) is a soluble base (an alkali)."
+      },
+      {
+        id: "T4_Q31",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "Write the balanced symbol equation for the reaction between zinc carbonate and hydrochloric acid.",
+        formula: "ZnCO<sub>3</sub>(s) + __ HCl(aq) &rarr; ZnCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+        options: [
+          "ZnCO<sub>3</sub>(s) + 2HCl(aq) &rarr; ZnCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+          "ZnCO<sub>3</sub>(s) + HCl(aq) &rarr; ZnCl(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+          "ZnCO<sub>3</sub>(s) + 2HCl(aq) &rarr; ZnCl<sub>2</sub>(aq) + H<sub>2</sub>(g) + CO<sub>3</sub>(g)",
+          "2ZnCO<sub>3</sub>(s) + 2HCl(aq) &rarr; 2ZnCl(aq) + H<sub>2</sub>O(l) + 2CO<sub>2</sub>(g)"
+        ],
+        answer: 0,
+        insight: "Zinc forms Zn<sup>2+</sup> so the salt is ZnCl<sub>2</sub>, requiring 2 HCl molecules to supply 2 Cl<sup>−</sup> and 2 H<sup>+</sup> (forming 1 H<sub>2</sub>O)."
+      },
+      {
+        id: "T4_Q32",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "During Required Practical 1, how can a student check that the reaction between copper(II) carbonate and dilute hydrochloric acid has completely finished?",
+        formula: "CuCO<sub>3</sub>(s) + 2HCl(aq) &rarr; CuCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+        options: [
+          "Fizzing (effervescence) stops AND unreacted solid copper(II) carbonate remains visible at the bottom of the beaker",
+          "The solution turns colourless and boils vigorously",
+          "The temperature drops to 0 &deg;C",
+          "A white precipitate of copper chloride fills the beaker"
+        ],
+        answer: 0,
+        insight: "When all the acid has reacted, no more CO<sub>2</sub> gas bubbles are produced and excess solid CuCO<sub>3</sub> settles unreacted."
+      },
+      {
+        id: "T4_Q33",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "Which salt is formed when potassium hydroxide solution reacts with dilute nitric acid?",
+        formula: "KOH(aq) + HNO<sub>3</sub>(aq) &rarr; ? + H<sub>2</sub>O(l)",
+        options: ["Potassium nitrate (KNO<sub>3</sub>)", "Potassium nitride (K<sub>3</sub>N)", "Potassium nitrite (KNO<sub>2</sub>)", "Potassium sulfate (K<sub>2</sub>SO<sub>4</sub>)"],
+        answer: 0,
+        insight: "Potassium hydroxide + nitric acid &rarr; potassium nitrate + water."
+      },
+      {
+        id: "T4_Q34",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "What is the ionic equation for the reaction of solid calcium carbonate with any strong dilute acid?",
+        formula: "CaCO<sub>3</sub>(s) + 2H<sup>+</sup>(aq) &rarr; ?",
+        options: [
+          "CaCO<sub>3</sub>(s) + 2H<sup>+</sup>(aq) &rarr; Ca<sup>2+</sup>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+          "CO<sub>3</sub><sup>2&minus;</sup>(aq) + H<sup>+</sup>(aq) &rarr; HCO<sub>3</sub>(g)",
+          "Ca<sup>2+</sup>(aq) + 2Cl<sup>&minus;</sup>(aq) &rarr; CaCl<sub>2</sub>(s)",
+          "H<sup>+</sup>(aq) + OH<sup>&minus;</sup>(aq) &rarr; H<sub>2</sub>O(l)"
+        ],
+        answer: 0,
+        insight: "CaCO<sub>3</sub>(s) is an insoluble solid so it is written in full; spectator anions (e.g., Cl<sup>−</sup> or NO<sub>3</sub><sup>−</sup>) cancel out."
+      },
+      {
+        id: "T4_Q35",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "Why should a student use an electric water bath or gentle Bunsen flame (stopping heating when crystals begin to appear around the edge) during crystallisation in RP1?",
+        formula: null,
+        options: [
+          "To prevent spitting of hot crystals/solution and avoid thermal decomposition or loss of water of crystallisation",
+          "Because evaporating basins melt above 100 &deg;C",
+          "To keep the excess copper oxide dissolved in the filtrate",
+          "To convert the salt into a metal oxide"
+        ],
+        answer: 0,
+        insight: "Gentle heating to the crystallisation point prevents hazardous spitting and ensures hydrated crystals form when cooled slowly."
+      },
+      {
+        id: "T4_Q36",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Reactions of Acids, Bases & Salts (RP1)",
+        stem: "Which chemical formula represents iron(III) chloride?",
+        formula: "Fe<sup>3+</sup> &nbsp;and&nbsp; Cl<sup>&minus;</sup>",
+        options: ["FeCl", "FeCl<sub>2</sub>", "FeCl<sub>3</sub>", "Fe<sub>3</sub>Cl"],
+        answer: 2,
+        insight: "The Roman numeral (III) indicates an Fe<sup>3+</sup> ion, which requires three Cl<sup>−</sup> ions to balance charge: FeCl<sub>3</sub>."
+      },
+
+      // ========================================================================
+      // 3. pH SCALE, NEUTRALISATION & TITRATIONS — INCLUDING RP2 (18 Questions)
+      // ========================================================================
+      {
+        id: "T4_Q37",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "Which ions make an aqueous solution acidic, and which ions make an aqueous solution alkaline?",
+        formula: null,
+        options: [
+          "Acids produce hydrogen ions (H<sup>+</sup>); alkalis produce hydroxide ions (OH<sup>&minus;</sup>)",
+          "Acids produce hydroxide ions (OH<sup>&minus;</sup>); alkalis produce hydrogen ions (H<sup>+</sup>)",
+          "Acids produce oxide ions (O<sup>2&minus;</sup>); alkalis produce chloride ions (Cl<sup>&minus;</sup>)",
+          "Acids produce sodium ions (Na<sup>+</sup>); alkalis produce sulfate ions (SO<sub>4</sub><sup>2&minus;</sup>)"
+        ],
+        answer: 0,
+        insight: "In aqueous solutions, acids release H<sup>+</sup>(aq) ions (giving pH &lt; 7) and alkalis release OH<sup>−</sup>(aq) ions (giving pH &gt; 7)."
+      },
+      {
+        id: "T4_Q38",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "Which ionic equation represents EVERY neutralisation reaction between an acid and an alkali in aqueous solution?",
+        formula: "Acid + Alkali &rarr; Salt + Water",
+        options: [
+          "H<sup>+</sup>(aq) + OH<sup>&minus;</sup>(aq) &rarr; H<sub>2</sub>O(l)",
+          "2H<sup>+</sup>(aq) + O<sup>2&minus;</sup>(aq) &rarr; H<sub>2</sub>O(l)",
+          "H<sub>2</sub>(g) + OH<sup>&minus;</sup>(aq) &rarr; H<sub>2</sub>O(l) + H<sup>+</sup>(aq)",
+          "Na<sup>+</sup>(aq) + Cl<sup>&minus;</sup>(aq) &rarr; NaCl(aq)"
+        ],
+        answer: 0,
+        insight: "AQA required ionic equation: H<sup>+</sup>(aq) + OH<sup>−</sup>(aq) &rarr; H<sub>2</sub>O(l), forming neutral water (pH 7)."
+      },
+      {
+        id: "T4_Q39",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "What colour does universal indicator turn in: (1) a strong acid of pH 1, (2) pure neutral water of pH 7, and (3) a strong alkali of pH 14?",
+        formula: null,
+        options: [
+          "(1) Red, (2) Green, (3) Purple",
+          "(1) Purple, (2) Green, (3) Red",
+          "(1) Yellow, (2) Blue, (3) Red",
+          "(1) Colourless, (2) Pink, (3) Orange"
+        ],
+        answer: 0,
+        insight: "Universal indicator displays a continuous spectrum: red (pH 0–2), orange/yellow (pH 3–6), green (pH 7 neutral), blue (pH 8–11), and purple/violet (pH 12–14)."
+      },
+      {
+        id: "T4_Q40",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "What is the scientific difference between a STRONG acid (such as hydrochloric acid) and a WEAK acid (such as ethanoic acid)?",
+        formula: "HCl(aq) &rarr; H<sup>+</sup> + Cl<sup>&minus;</sup> &nbsp;vs.&nbsp; CH<sub>3</sub>COOH(aq) &#8652; H<sup>+</sup> + CH<sub>3</sub>COO<sup>&minus;</sup>",
+        options: [
+          "A strong acid completely ionises in aqueous solution, whereas a weak acid only partially ionises in aqueous solution",
+          "A strong acid contains more water than a weak acid",
+          "A strong acid is always concentrated, whereas a weak acid is always dilute",
+          "A weak acid produces OH<sup>&minus;</sup> ions instead of H<sup>+</sup> ions"
+        ],
+        answer: 0,
+        insight: "AQA Higher Tier key distinction: 'Strong vs. weak' refers to the degree of ionisation in water (complete vs. partial), whereas 'concentrated vs. dilute' refers to the amount of acid dissolved per dm<sup>3</sup>."
+      },
+      {
+        id: "T4_Q41",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "Which trio of acids are all classified as WEAK acids in AQA GCSE Chemistry?",
+        formula: null,
+        options: [
+          "Ethanoic acid, citric acid, and carbonic acid",
+          "Hydrochloric acid, nitric acid, and sulfuric acid",
+          "Hydrochloric acid, ethanoic acid, and nitric acid",
+          "Sulfuric acid, citric acid, and phosphoric acid"
+        ],
+        answer: 0,
+        insight: "AQA named examples: Strong acids = hydrochloric, nitric, sulfuric. Weak acids = ethanoic, citric, carbonic."
+      },
+      {
+        id: "T4_Q42",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "For a given concentration of aqueous acid, why does a strong acid have a LOWER pH than a weak acid?",
+        formula: null,
+        options: [
+          "The strong acid completely ionises, producing a higher concentration of H<sup>+</sup> ions than the partially ionised weak acid",
+          "The strong acid has a higher relative formula mass",
+          "The weak acid neutralises itself",
+          "Lower pH numbers mean fewer H<sup>+</sup> ions"
+        ],
+        answer: 0,
+        insight: "Because pH depends on H<sup>+</sup>(aq) concentration, complete ionisation yields more H<sup>+</sup> ions per dm<sup>3</sup> and therefore a lower pH."
+      },
+      {
+        id: "T4_Q43",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "As the pH of an aqueous solution decreases by 1 unit (for example, from pH 4 to pH 3), how does the concentration of hydrogen ions (H<sup>+</sup>) change?",
+        formula: "&Delta;pH = &minus;1",
+        options: [
+          "The H<sup>+</sup> ion concentration increases by a factor of 10",
+          "The H<sup>+</sup> ion concentration decreases by a factor of 10",
+          "The H<sup>+</sup> ion concentration increases by a factor of 2",
+          "The H<sup>+</sup> ion concentration increases by 1 mol/dm<sup>3</sup>"
+        ],
+        answer: 0,
+        insight: "The pH scale is logarithmic (base 10): each decrease of 1 pH unit corresponds to a 10&times; increase in H<sup>+</sup>(aq) concentration."
+      },
+      {
+        id: "T4_Q44",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "Solution A has a pH of 2 and Solution B has a pH of 5. How many times greater is the concentration of H<sup>+</sup> ions in Solution A compared with Solution B?",
+        formula: "pH 2 vs. pH 5",
+        options: [
+          "1000 times greater (10<sup>3</sup>)",
+          "3 times greater",
+          "30 times greater",
+          "100 times greater (10<sup>2</sup>)"
+        ],
+        answer: 0,
+        insight: "A difference of 3 pH units (5 &minus; 2 = 3) means 10 &times; 10 &times; 10 = 10<sup>3</sup> = 1000 times higher H<sup>+</sup> concentration."
+      },
+      {
+        id: "T4_Q45",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "In Required Practical 2 (neutralisation titration), why is a single indicator such as phenolphthalein or methyl orange used instead of universal indicator?",
+        formula: null,
+        options: [
+          "Single indicators give a sharp, sudden colour change at the exact end-point, whereas universal indicator changes gradually across several colours",
+          "Universal indicator destroys the burette tap",
+          "Universal indicator only works above 80 &deg;C",
+          "Phenolphthalein neutralises the acid faster"
+        ],
+        answer: 0,
+        insight: "AQA RP2 key question: universal indicator undergoes a gradual colour transition over a range of pH values, making it impossible to judge the exact end-point."
+      },
+      {
+        id: "T4_Q46",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "In Required Practical 2, which two pieces of volumetric apparatus are used to measure: (1) a fixed 25.0 cm<sup>3</sup> volume of alkali into the conical flask, and (2) the variable volume of acid added until neutralisation?",
+        formula: null,
+        options: [
+          "(1) Volumetric pipette (with pipette filler); (2) Burette",
+          "(1) Measuring cylinder; (2) Beaker",
+          "(1) Burette; (2) Dropping pipette",
+          "(1) Conical flask; (2) Test tube"
+        ],
+        answer: 0,
+        insight: "A volumetric pipette accurately delivers a single fixed volume (25.0 cm<sup>3</sup>), while a burette measures variable volumes to the nearest 0.05 cm<sup>3</sup>."
+      },
+      {
+        id: "T4_Q47",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "During a titration (RP2), why is the conical flask placed on a white tile and swirled continuously as acid is added drop by drop near the end-point?",
+        formula: null,
+        options: [
+          "The white tile makes the indicator colour change easier to see clearly, and swirling ensures the reactants mix thoroughly",
+          "The white tile heats the flask and swirling evaporates the water",
+          "To prevent the glass conical flask from cracking",
+          "To stop carbon dioxide dissolving from the air"
+        ],
+        answer: 0,
+        insight: "A white tile provides high contrast for spotting the first permanent colour change, and swirling ensures complete mixing after every drop."
+      },
+      {
+        id: "T4_Q48",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "In Required Practical 2, what are 'concordant' titres, and how should a student calculate the mean titre?",
+        formula: "Titre 1 (rough): 24.80 cm<sup>3</sup> | Titre 2: 24.15 cm<sup>3</sup> | Titre 3: 24.20 cm<sup>3</sup>",
+        options: [
+          "Titres within 0.10 cm<sup>3</sup> of each other; discard the rough outlier and average only the concordant titres (24.18 cm<sup>3</sup>)",
+          "All three titres averaged together including the rough titre (24.38 cm<sup>3</sup>)",
+          "Titres within 1.00 cm<sup>3</sup> of each other; take the largest value",
+          "The difference between the highest and lowest titres"
+        ],
+        answer: 0,
+        insight: "Concordant results agree within 0.10 cm<sup>3</sup>. Only concordant titres are averaged—anomalous/rough titres are excluded."
+      },
+      {
+        id: "T4_Q49",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "What colour change is observed at the end-point when acid is added from a burette into sodium hydroxide containing phenolphthalein indicator?",
+        formula: "Alkali &rarr; Neutral/Acid",
+        options: [
+          "Pink to colourless",
+          "Colourless to pink",
+          "Yellow to red",
+          "Blue to green"
+        ],
+        answer: 0,
+        insight: "Phenolphthalein is pink in alkaline solutions and turns colourless as soon as the alkali is neutralised."
+      },
+      {
+        id: "T4_Q50",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "In a titration (RP2), 25.0 cm<sup>3</sup> of 0.12 mol/dm<sup>3</sup> NaOH is neutralised by 30.0 cm<sup>3</sup> of HCl. Calculate the concentration of the HCl.",
+        formula: "NaOH(aq) + HCl(aq) &rarr; NaCl(aq) + H<sub>2</sub>O(l)",
+        options: ["0.10 mol/dm<sup>3</sup>", "0.12 mol/dm<sup>3</sup>", "0.144 mol/dm<sup>3</sup>", "0.24 mol/dm<sup>3</sup>"],
+        answer: 0,
+        insight: "Moles NaOH = 0.12 &times; (25.0 &divide; 1000) = 0.0030 mol. Ratio 1 : 1 &rarr; 0.0030 mol HCl. Conc HCl = 0.0030 &divide; (30.0 &divide; 1000) = 0.10 mol/dm<sup>3</sup>."
+      },
+      {
+        id: "T4_Q51",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "In a titration (RP2), 25.0 cm<sup>3</sup> of 0.16 mol/dm<sup>3</sup> NaOH reacts completely with 20.0 cm<sup>3</sup> of sulfuric acid (H<sub>2</sub>SO<sub>4</sub>). Calculate the concentration of H<sub>2</sub>SO<sub>4</sub>.",
+        formula: "2NaOH(aq) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; Na<sub>2</sub>SO<sub>4</sub>(aq) + 2H<sub>2</sub>O(l)",
+        options: ["0.10 mol/dm<sup>3</sup>", "0.20 mol/dm<sup>3</sup>", "0.40 mol/dm<sup>3</sup>", "0.08 mol/dm<sup>3</sup>"],
+        answer: 0,
+        insight: "Moles NaOH = 0.16 &times; 0.025 = 0.0040 mol. Ratio NaOH : H<sub>2</sub>SO<sub>4</sub> is 2 : 1 &rarr; 0.0020 mol H<sub>2</sub>SO<sub>4</sub>. Conc = 0.0020 &divide; 0.020 = 0.10 mol/dm<sup>3</sup>."
+      },
+      {
+        id: "T4_Q52",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "Before starting a titration (RP2), why should the burette be rinsed with a small amount of the acid being used rather than left wet with distilled water?",
+        formula: null,
+        options: [
+          "Residual distilled water would dilute the acid, increasing the titre volume needed to reach the end-point",
+          "Distilled water reacts with glass to form sodium silicate",
+          "Water turns methyl orange permanently black",
+          "Rinsing with acid lubricates the outside of the flask"
+        ],
+        answer: 0,
+        insight: "Any water droplets inside the burette would dilute the standard acid solution and make the measured titre artificially large."
+      },
+      {
+        id: "T4_Q53",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "Apart from universal indicator paper/solution, what electronic instrument can be used to measure the pH of a solution accurately?",
+        formula: null,
+        options: ["A pH probe / pH meter", "A Liebig condenser", "A fractionating column", "A ammeter"],
+        answer: 0,
+        insight: "A calibrated digital pH probe connected to a pH meter gives a precise numerical pH reading without subjective colour judgement."
+      },
+      {
+        id: "T4_Q54",
+        tiers: ["separate"],
+        isPractical: true,
+        topic: "pH Scale, Neutralisation & Titrations (RP2)",
+        stem: "What colour change occurs at the end-point when acid is added from a burette to an alkali containing methyl orange indicator?",
+        formula: "Alkali &rarr; Acid",
+        options: [
+          "Yellow to red (or peach/orange end-point)",
+          "Pink to colourless",
+          "Green to purple",
+          "Blue to colourless"
+        ],
+        answer: 0,
+        insight: "Methyl orange is yellow in alkali and red in acid, giving a sharp yellow-to-orange/red transition at the end-point."
+      },
+
+      // ========================================================================
+      // 4. ELECTROLYSIS & AQUEOUS SOLUTIONS — INCLUDING RP3 (18 Questions)
+      // ========================================================================
+      {
+        id: "T4_Q55",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "Why can an ionic compound ONLY be electrolysed when it is molten or dissolved in aqueous solution, and NOT when solid?",
+        formula: null,
+        options: [
+          "In the solid state the ions are fixed in a giant lattice and cannot move; when molten or dissolved the ions are free to move and carry electrical charge",
+          "Solid ionic compounds contain no ions",
+          "Electrons can only flow through liquids",
+          "Solid ionic compounds are made of covalent molecules"
+        ],
+        answer: 0,
+        insight: "Electrolysis requires an electrolyte—a liquid or solution containing free-moving ions that migrate to the oppositely charged electrodes."
+      },
+      {
+        id: "T4_Q56",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "During electrolysis, which ions move to the CATHODE (negative electrode) and which ions move to the ANODE (positive electrode)?",
+        formula: null,
+        options: [
+          "Positive ions (cations) move to the cathode; negative ions (anions) move to the anode",
+          "Negative ions move to the cathode; positive ions move to the anode",
+          "Both positive and negative ions move to the cathode",
+          "Neutral atoms move to both electrodes"
+        ],
+        answer: 0,
+        insight: "Opposite charges attract: positively charged ions move to the negative cathode (where they gain electrons/are reduced), and negatively charged ions move to the positive anode (where they lose electrons/are oxidised)."
+      },
+      {
+        id: "T4_Q57",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "What products are formed at the cathode and anode during the electrolysis of molten lead(II) bromide?",
+        formula: "PbBr<sub>2</sub>(l) &rarr; Pb(l) + Br<sub>2</sub>(g)",
+        options: [
+          "Cathode: lead metal; Anode: bromine gas",
+          "Cathode: bromine gas; Anode: lead metal",
+          "Cathode: hydrogen gas; Anode: oxygen gas",
+          "Cathode: lead metal; Anode: oxygen gas"
+        ],
+        answer: 0,
+        insight: "In a molten binary ionic compound, there are only two ions: Pb<sup>2+</sup> goes to the cathode to form lead, and Br<sup>−</sup> goes to the anode to form brown bromine vapour."
+      },
+      {
+        id: "T4_Q58",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In the industrial extraction of aluminium by electrolysis, why is aluminium oxide mixed with molten cryolite?",
+        formula: "Al<sub>2</sub>O<sub>3</sub> + cryolite",
+        options: [
+          "Cryolite lowers the melting point of the mixture, reducing the energy needed and saving money",
+          "Cryolite reacts with aluminium oxide to produce hydrogen",
+          "Cryolite increases the melting point to 3000 &deg;C",
+          "Cryolite prevents oxygen from forming at the anode"
+        ],
+        answer: 0,
+        insight: "Pure aluminium oxide has a very high melting point (over 2000 °C). Dissolving it in molten cryolite lowers the operating temperature to around 950 °C, saving huge amounts of thermal/electrical energy."
+      },
+      {
+        id: "T4_Q59",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In the industrial electrolysis of aluminium oxide, why must the positive carbon (graphite) anodes be replaced regularly?",
+        formula: "C(s) + O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g)",
+        options: [
+          "Oxygen produced at the hot positive anodes reacts with the carbon electrodes to form carbon dioxide gas, gradually burning them away",
+          "Aluminium metal coats the positive anodes and blocks the current",
+          "The carbon anodes dissolve in molten cryolite at 20 &deg;C",
+          "Hydrogen gas erodes the carbon anodes"
+        ],
+        answer: 0,
+        insight: "At ~950 °C, the oxygen formed at the positive carbon anodes reacts with the graphite to make CO<sub>2</sub> gas, wearing away the anodes."
+      },
+      {
+        id: "T4_Q60",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3 (electrolysis of aqueous solutions), what is the rule for predicting which product forms at the negative CATHODE?",
+        formula: "M<sup>+</sup>(aq) vs. H<sup>+</sup>(aq)",
+        options: [
+          "Hydrogen gas is produced if the metal is MORE reactive than hydrogen; the metal itself is produced if the metal is LESS reactive than hydrogen (such as copper or silver)",
+          "The metal is always produced regardless of its reactivity",
+          "Oxygen gas is always produced at the cathode",
+          "Hydrogen is only produced if halide ions are present"
+        ],
+        answer: 0,
+        insight: "At the cathode, the LESS reactive ion is discharged: metals above hydrogen stay in solution as ions while H<sup>+</sup> is discharged as H<sub>2</sub>(g); metals below hydrogen (Cu, Ag) are deposited as solid metal."
+      },
+      {
+        id: "T4_Q61",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3 (electrolysis of aqueous solutions using inert graphite electrodes), what is the rule for predicting which gas forms at the positive ANODE?",
+        formula: "X<sup>&minus;</sup>(aq) vs. OH<sup>&minus;</sup>(aq)",
+        options: [
+          "Oxygen gas is produced UNLESS the solution contains halide ions (Cl<sup>&minus;</sup>, Br<sup>&minus;</sup>, I<sup>&minus;</sup>) in high concentration, in which case the halogen (Cl<sub>2</sub>, Br<sub>2</sub>, I<sub>2</sub>) is produced",
+          "Hydrogen gas is always produced at the anode",
+          "Carbon dioxide is always produced at the anode",
+          "Sulfur dioxide is produced whenever sulfate ions are present"
+        ],
+        answer: 0,
+        insight: "At the anode: if Cl<sup>−</sup>, Br<sup>−</sup>, or I<sup>−</sup> ions are present in concentrated aqueous solution, the halogen is formed; if NO halide is present (e.g., SO<sub>4</sub><sup>2−</sup>, NO<sub>3</sub><sup>−</sup>), OH<sup>−</sup> from water is discharged to produce oxygen gas."
+      },
+      {
+        id: "T4_Q62",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3, a student electrolyses aqueous copper(II) chloride (CuCl<sub>2</sub>(aq)) using inert graphite electrodes. What is observed at each electrode?",
+        formula: "CuCl<sub>2</sub>(aq)",
+        options: [
+          "Cathode: pink-brown solid copper deposits; Anode: bubbles of pale green chlorine gas (which bleaches damp litmus paper)",
+          "Cathode: bubbles of hydrogen gas; Anode: bubbles of oxygen gas",
+          "Cathode: bubbles of chlorine gas; Anode: pink-brown copper deposits",
+          "Cathode: sodium metal forms; Anode: oxygen gas forms"
+        ],
+        answer: 0,
+        insight: "Copper is less reactive than hydrogen &rarr; Cu(s) forms at the cathode. Chloride is a halide ion &rarr; Cl<sub>2</sub>(g) forms at the anode."
+      },
+      {
+        id: "T4_Q63",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3, a student electrolyses aqueous sodium chloride (NaCl(aq)) using inert graphite electrodes. What are the products at the cathode and anode?",
+        formula: "NaCl(aq)",
+        options: [
+          "Cathode: hydrogen gas; Anode: chlorine gas (leaving sodium hydroxide in solution)",
+          "Cathode: sodium metal; Anode: chlorine gas",
+          "Cathode: hydrogen gas; Anode: oxygen gas",
+          "Cathode: sodium metal; Anode: oxygen gas"
+        ],
+        answer: 0,
+        insight: "Sodium is more reactive than hydrogen &rarr; H<sub>2</sub>(g) forms at the cathode. Chloride is a halide ion &rarr; Cl<sub>2</sub>(g) forms at the anode. Na<sup>+</sup> and OH<sup>−</sup> remain in solution as NaOH(aq)."
+      },
+      {
+        id: "T4_Q64",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3, a student electrolyses aqueous copper(II) sulfate (CuSO<sub>4</sub>(aq)) using inert graphite electrodes. What are the products at the cathode and anode?",
+        formula: "CuSO<sub>4</sub>(aq)",
+        options: [
+          "Cathode: solid copper metal; Anode: oxygen gas",
+          "Cathode: hydrogen gas; Anode: sulfur dioxide gas",
+          "Cathode: solid copper metal; Anode: hydrogen gas",
+          "Cathode: oxygen gas; Anode: solid copper metal"
+        ],
+        answer: 0,
+        insight: "Copper is below hydrogen &rarr; Cu(s) deposits on the cathode. Sulfate is NOT a halide &rarr; OH<sup>−</sup> is discharged at the anode to give O<sub>2</sub>(g)."
+      },
+      {
+        id: "T4_Q65",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3, why are inert graphite (carbon) or platinum electrodes used when investigating the electrolysis of aqueous salt solutions?",
+        formula: null,
+        options: [
+          "They conduct electricity well and do not react with the electrolyte or the products formed",
+          "They dissolve in water to supply extra metal ions",
+          "They are non-conductors that prevent short circuits",
+          "They absorb chlorine gas so it cannot escape"
+        ],
+        answer: 0,
+        insight: "Inert electrodes carry current into the electrolyte without participating chemically in the electrode reactions."
+      },
+      {
+        id: "T4_Q66",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "Which half-equation correctly represents the formation of oxygen gas from hydroxide ions at the positive anode during the electrolysis of aqueous solutions?",
+        formula: "Anode oxidation half-equation",
+        options: [
+          "4OH<sup>&minus;</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup>",
+          "4OH<sup>&minus;</sup> + 4e<sup>&minus;</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O",
+          "2O<sup>2&minus;</sup> + 4e<sup>&minus;</sup> &rarr; O<sub>2</sub>",
+          "2H<sub>2</sub>O &rarr; O<sub>2</sub> + 4H<sup>+</sup>"
+        ],
+        answer: 0,
+        insight: "AQA Higher Tier must-memorise half-equation: 4OH<sup>−</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>−</sup> (or equivalently 4OH<sup>−</sup> &minus; 4e<sup>−</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O)."
+      },
+      {
+        id: "T4_Q67",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "Which half-equation correctly represents the formation of hydrogen gas at the negative cathode during the electrolysis of aqueous sodium sulfate?",
+        formula: "Cathode reduction half-equation",
+        options: [
+          "2H<sup>+</sup> + 2e<sup>&minus;</sup> &rarr; H<sub>2</sub>",
+          "2H<sup>+</sup> &rarr; H<sub>2</sub> + 2e<sup>&minus;</sup>",
+          "H<sup>+</sup> + e<sup>&minus;</sup> &rarr; H<sub>2</sub>",
+          "Na<sup>+</sup> + e<sup>&minus;</sup> &rarr; Na"
+        ],
+        answer: 0,
+        insight: "At the cathode, positively charged H<sup>+</sup> ions gain electrons (reduction): 2H<sup>+</sup> + 2e<sup>−</sup> &rarr; H<sub>2</sub>."
+      },
+      {
+        id: "T4_Q68",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "Which half-equation correctly represents the formation of chlorine gas at the anode during the electrolysis of aqueous sodium chloride?",
+        formula: "Anode oxidation half-equation",
+        options: [
+          "2Cl<sup>&minus;</sup> &rarr; Cl<sub>2</sub> + 2e<sup>&minus;</sup>",
+          "2Cl<sup>&minus;</sup> + 2e<sup>&minus;</sup> &rarr; Cl<sub>2</sub>",
+          "Cl<sup>&minus;</sup> &rarr; Cl<sub>2</sub> + e<sup>&minus;</sup>",
+          "Cl<sub>2</sub> + 2e<sup>&minus;</sup> &rarr; 2Cl<sup>&minus;</sup>"
+        ],
+        answer: 0,
+        insight: "Two chloride ions each lose 1 electron (oxidation) at the positive anode to form a diatomic chlorine molecule: 2Cl<sup>−</sup> &rarr; Cl<sub>2</sub> + 2e<sup>−</sup>."
+      },
+      {
+        id: "T4_Q69",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "Which two half-equations represent the reactions at the cathode and anode during the industrial electrolysis of molten aluminium oxide?",
+        formula: "Al<sup>3+</sup> and O<sup>2&minus;</sup>",
+        options: [
+          "Cathode: Al<sup>3+</sup> + 3e<sup>&minus;</sup> &rarr; Al &nbsp;|&nbsp; Anode: 2O<sup>2&minus;</sup> &rarr; O<sub>2</sub> + 4e<sup>&minus;</sup>",
+          "Cathode: Al<sup>3+</sup> &rarr; Al + 3e<sup>&minus;</sup> &nbsp;|&nbsp; Anode: 2O<sup>2&minus;</sup> + 4e<sup>&minus;</sup> &rarr; O<sub>2</sub>",
+          "Cathode: 2H<sup>+</sup> + 2e<sup>&minus;</sup> &rarr; H<sub>2</sub> &nbsp;|&nbsp; Anode: 4OH<sup>&minus;</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup>",
+          "Cathode: Al<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Al &nbsp;|&nbsp; Anode: O<sup>2&minus;</sup> &rarr; O + 2e<sup>&minus;</sup>"
+        ],
+        answer: 0,
+        insight: "At the cathode, Al<sup>3+</sup> ions gain 3 electrons (reduction: Al<sup>3+</sup> + 3e<sup>−</sup> &rarr; Al). At the anode, two O<sup>2−</sup> ions lose 4 electrons in total (oxidation: 2O<sup>2−</sup> &rarr; O<sub>2</sub> + 4e<sup>−</sup>)."
+      },
+      {
+        id: "T4_Q70",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3, a student electrolyses aqueous sodium sulfate (Na<sub>2</sub>SO<sub>4</sub>(aq)) using inert electrodes. What gases are collected at the cathode and anode?",
+        formula: "Na<sub>2</sub>SO<sub>4</sub>(aq)",
+        options: [
+          "Cathode: hydrogen gas; Anode: oxygen gas (effectively electrolysing water)",
+          "Cathode: sodium metal; Anode: sulfur dioxide gas",
+          "Cathode: oxygen gas; Anode: hydrogen gas",
+          "Cathode: sodium metal; Anode: oxygen gas"
+        ],
+        answer: 0,
+        insight: "Sodium is more reactive than hydrogen (so H<sub>2</sub> forms at the cathode) and sulfate is not a halide (so O<sub>2</sub> forms at the anode)."
+      },
+      {
+        id: "T4_Q71",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "In Required Practical 3, how do you test the gas produced at the anode during the electrolysis of aqueous copper(II) chloride?",
+        formula: "Cl<sub>2</sub>(g)",
+        options: [
+          "Hold damp blue litmus paper near the anode — chlorine bleaches the damp litmus paper white",
+          "Hold a lit splint at the anode — chlorine makes a squeaky pop",
+          "Bubble the gas through limewater — chlorine turns it milky",
+          "Insert a glowing splint — chlorine relights it"
+        ],
+        answer: 0,
+        insight: "Chlorine gas turns damp blue litmus paper red briefly and then bleaches it white."
+      },
+      {
+        id: "T4_Q72",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        topic: "Electrolysis & Aqueous Solutions (RP3)",
+        stem: "Why does the blue colour of aqueous copper(II) sulfate fade during electrolysis with inert graphite electrodes, while the solution becomes increasingly acidic?",
+        formula: "2CuSO<sub>4</sub>(aq) + 2H<sub>2</sub>O(l) &rarr; 2Cu(s) + O<sub>2</sub>(g) + 2H<sub>2</sub>SO<sub>4</sub>(aq)",
+        options: [
+          "Blue Cu<sup>2+</sup> ions are removed at the cathode and OH<sup>&minus;</sup> ions are removed at the anode, leaving H<sup>+</sup> and SO<sub>4</sub><sup>2&minus;</sup> ions (sulfuric acid) in solution",
+          "Graphite dissolves into the solution to turn it colourless",
+          "Copper metal reacts with oxygen to form an acid",
+          "Sulfate ions are discharged as sulfur gas"
+        ],
+        answer: 0,
+        insight: "Removing Cu<sup>2+</sup> fades the blue colour, and removing OH<sup>−</sup> leaves an excess of H<sup>+</sup>(aq) alongside spectator SO<sub>4</sub><sup>2−</sup> ions."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practicals'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Chemistry", badge: "Separate Chemistry Selected" }
+    };
+
+    /* ==========================================================================
+       CONFIGURATION SCREEN INTERACTIONS
+       ========================================================================== */
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = q.tiers.includes(configState.tier);
+        const focusMatch = configState.focus === "all" ? true : q.isPractical;
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practicals"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practicals" ? " (Required Practicals)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+      const countDisplay = configState.questionCount > pool.length
+        ? `${effectiveCount} Available Questions`
+        : `${configState.questionCount} Questions`;
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${countDisplay}) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool.slice(0, Math.min(configState.questionCount, pool.length));
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Chemical Changes";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${configState.focus === "practicals" ? "Required Practicals (RP1, RP2 & RP3) Drill" : "Full Topic 4 Assessment"}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => item.question);
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Chemical Changes Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 4 content or Required Practicals only, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-topic-pill").textContent = qObj.topic;
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      document.getElementById("q-kicker-label").textContent = `Question ${idx + 1} of ${total}`;
+      document.getElementById("q-stem-text").innerHTML = qObj.stem;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formula) {
+        formulaBox.innerHTML = qObj.formula;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.answer;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.answer) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.answer];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.insight;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC REPORT
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 4 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 4 Chemical Changes knowledge and practical skills are exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Chemical Changes. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, read the AQA Examiner Insights, and retry your missed questions to boost your grade.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in red below, study the examiner explanations, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.topic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show All Answers & Insights";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.answer]}. ${q.options[q.answer]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.topic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.stem}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--ruby-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.insight}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 5 (Maximum Foundation)";
+        if (pct >= 65) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 47) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 87) return "Estimated AQA Indicator: Grade 9";
+      if (pct >= 75) return "Estimated AQA Indicator: Grade 8";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 7";
+      if (pct >= 53) return "Estimated AQA Indicator: Grade 6";
+      if (pct >= 40) return "Estimated AQA Indicator: Grade 5";
+      return "Estimated AQA Indicator: Grade 4 / Below";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show All Answers & Insights" : "Hide All Answers & Insights";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
